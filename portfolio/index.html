@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>홍세민</title>
+<meta name="description" content="부산대학교 정보컴퓨터공학부 홍세민의 소개 홈페이지입니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="홍세민">
+<meta property="og:description" content="부산대학교 정보컴퓨터공학부 · 강화학습, LLM 에이전트">
+<meta property="og:url" content="https://semin73.github.io/">
+<meta property="og:image" content="https://semin73.github.io/assets/img/og.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="page">
+
+  <h1 class="name">홍세민</h1>
+
+  <div class="profile">
+    <div class="photo">
+      <img src="assets/img/profile.jpg" alt="홍세민 사진" width="130" height="160">
+    </div>
+    <p class="info">
+      학부생,<br>
+      <a href="https://cse.pusan.ac.kr/">정보컴퓨터공학부</a>,<br>
+      <a href="https://www.pusan.ac.kr/">부산대학교</a>,<br>
+      부산, 대한민국<br>
+      E-mail: <span class="mail">semin73</span>@pusan.ac.kr<br>
+      GitHub: <a href="https://github.com/semin73">semin73</a>
+    </p>
+  </div>
+
+  <hr>
+  <p>강화학습과 LLM을 이용한 에이전트를 공부하고 있습니다. 졸업과제로 포켓몬스터 레드를 사람 개입 없이 진행하는 에이전트를 만들었고, 지금은 로봇팔 강화학습 텀프로젝트를 하고 있습니다.</p>
+  <hr>
+
+  <h2>Interests</h2>
+  <hr>
+  <ul>
+    <li>강화학습 (PPO, SAC)</li>
+    <li>LLM 플래너와 하위 스킬을 나눈 계층형 에이전트</li>
+    <li>에이전트가 직접 관측한 정보로 지도를 만드는 탐험, 위상 지도 기반 내비게이션</li>
+    <li>시뮬레이션에서 학습한 정책을 실제 로봇에 옮기는 Sim2Real</li>
+  </ul>
+  <hr>
+
+  <h2>Education</h2>
+  <hr>
+  <ul>
+    <li><b>B.S.</b>, <a href="https://cse.pusan.ac.kr/">정보컴퓨터공학부</a>, <a href="https://www.pusan.ac.kr/">부산대학교</a> (재학 중)
+      <ul>
+        <li>졸업과제 : 장기계획 문제를 위한 스킬 기반 Pokémon-Playing Agent</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <h2>Projects</h2>
+  <hr>
+  <ul class="projects">
+    <li>
+      <b>장기계획 문제를 위한 스킬 기반 Pokémon-Playing Agent</b> (2026.05 ~ 2026.10)
+      <a href="https://www.youtube.com/watch?v=6qUmOWHkJos">[demo]</a>
+      <a href="https://github.com/pnucse-capstone2026/capstone-2026-team-22">[code]</a>
+      <a href="https://github.com/pnucse-capstone2026/capstone-2026-team-22/blob/main/docs/01.%EB%B3%B4%EA%B3%A0%EC%84%9C/3.2026%EC%A0%84%EA%B8%B0_%EC%B5%9C%EC%A2%85%EB%B3%B4%EA%B3%A0%EC%84%9C_22_Red-Y_%EC%9E%A5%EA%B8%B0%EA%B3%84%ED%9A%8D%20%EB%AC%B8%EC%A0%9C%EB%A5%BC%20%EC%9C%84%ED%95%9C%20%EC%8A%A4%ED%82%AC%20%EA%B8%B0%EB%B0%98%20Pok%C3%A9mon-Playing%20Agent.pdf">[report]</a>
+      <a href="https://github.com/pnucse-capstone2026/capstone-2026-team-22/blob/main/docs/03.%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C/%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C.pdf">[slides]</a>
+      <ul>
+        <li>부산대학교 정보컴퓨터공학부 졸업과제</li>
+        <li>문제 정의 : 기존 강화학습 방식은 정책 하나로 게임 전체를 학습함. 풀베기처럼 그전까지 쓸 일이 없던 행동이나 잠만보 깨우기 같은 드문 이벤트는 보상으로 배우기 어려워 결국 스크립트로 처리함</li>
+        <li>접근 : 다음 목표는 LLM 플래너가 정하고, 이동(A*), 탐험(PPO), 전투(PPO)는 각각의 스킬이 맡도록 나눔</li>
+        <li>역할 : Map(Global Map, Local Map) 구현, 탐험 정책(PPO) 설계 및 학습, LLM Planner 구현, 전체 통합 및 테스트 <span class="note"></span></li>
+        <li>기술 : Python, PyBoy, PufferLib, PyTorch, NetworkX, Claude Code CLI</li>
+        <li>결과 : 첫 포켓몬을 받은 직후부터 사람 개입 없이 첫 번째 관장을 이기고(24분 31초, 40,593 스텝) 달맞이산까지 진행. 탐험 정책 외부 확장률 80%, 내부 100%</li>
+      </ul>
+    </li>
+    <li>
+      <b>강화학습 기반 로봇팔 Pick-and-place</b>
+      <ul>
+        <li>프로젝트</li>
+        <li>무작위로 놓인 25mm 큐브를 30초 안에 집어서 목표 칸에 놓고 2초 동안 유지하는 과제</li>
+        <li>MuJoCo에서 SAC로 학습한 정책을 SO-101 기반 실물 로봇팔에 그대로 옮기는 방식으로 진행 중 (12월 검사)</li>
+        <li>기술 : MuJoCo, Gymnasium, Stable-Baselines3, ROS 2, Jetson, YOLO</li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+
+  <h2>Next</h2>
+  <hr>
+  <ul>
+    <li>LLM 플래너가 스킬 실행 순서까지 정하도록 확장해 보기 (지금은 계획, 이동, 탐험 순서가 고정)</li>
+    <li>탐험 스킬을 지도 넓히기(Coverage)와 새 출입구 찾기(SeekWarp)로 나누기</li>
+    <li>게임에서 확인한 구조를 실제 로봇의 긴 작업(집기, 옮기기, 놓기)에 적용해 보기</li>
+  </ul>
+  <hr>
+
+  <h2>CV</h2>
+  <hr>
+  <ul>
+    <li>-</a></li>
+  </ul>
+  <hr>
+
+  <h2>Notes</h2>
+  <hr>
+  <ul>
+    <li>추후</a></li>
+    <li>추후</a></li>
+  </ul>
+  <hr>
+
+  <p class="updated">Last updated: 2026.11.20</p>
+</div>
+</body>
+</html>
