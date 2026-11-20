@@ -23,17 +23,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 포트폴리오는 사이트 루트(/)에, 기존 MkDocs 노트는 /pokemonred/ 에 둡니다.
-      - name: Assemble site
-        run: |
-          mkdir -p _site/pokemonred
-          cp -r portfolio/. _site/
-          cp -r pokemonred/site/. _site/pokemonred/
-          touch _site/.nojekyll
-
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: portfolio
 
       - uses: actions/deploy-pages@v4
         id: deployment
